@@ -1,4 +1,4 @@
-# DynaSLAM
+# My-dyslam
 
 [[Project]](https://bertabescos.github.io/DynaSLAM/)   [[arXiv]](https://arxiv.org/abs/1806.05620)   [[Journal]](https://ieeexplore.ieee.org/document/8421015)
 
