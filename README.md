@@ -13,6 +13,8 @@ My-dyslam is a visual SLAM system that is robust in dynamic scenarios for stereo
 chmod +x build.sh
 ./build.sh
 - Place the `mask_rcnn_coco.h5` model in the folder `DynaSLAM_LK/src/python/`.
+- For dense mapping modules， installing PCL 1.7.0 and vtk 7.1.1.
+- Then check the build.sh.
 
 ## RGB-D Example on TUM Dataset
 - Download a sequence from http://vision.in.tum.de/data/datasets/rgbd-dataset/download and uncompress it.
