@@ -1,22 +1,14 @@
 # My-dyslam
 
-DynaSLAM is a visual SLAM system that is robust in dynamic scenarios for monocular, stereo and RGB-D configurations. Having a static map of the scene allows inpainting the frame background that has been occluded by such dynamic objects.
-
-<img src="imgs/teaser.png" width="900px"/>
-
-DynaSLAM: Tracking, Mapping and Inpainting in Dynamic Scenes   
-[Berta Bescos](http://bertabescos.github.io), [José M. Fácil](http://webdiis.unizar.es/~jmfacil/), [Javier Civera](http://webdiis.unizar.es/~jcivera/) and [José Neira](http://webdiis.unizar.es/~jneira/)   
-RA-L and IROS, 2018
-
-We provide examples to run the SLAM system in the [TUM dataset](http://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets) as RGB-D or monocular, and in the [KITTI dataset](http://www.cvlibs.net/datasets/kitti/eval_odometry.php) as stereo or monocular.
-
-## News
-- DynaSLAM supports now both OpenCV 2.X and OpenCV 3.X.
+My-dyslam is a visual SLAM system that is robust in dynamic scenarios for stereo and RGB-D configurations. Having a static map of the scene allows inpainting the frame background that has been occluded by such dynamic objects.
 
 ## Getting Started
-- Install ORB-SLAM2 prerequisites: C++11 or C++0x Compiler, Pangolin, OpenCV and Eigen3  (https://github.com/raulmur/ORB_SLAM2).
+- Install ORB-SLAM2 prerequisites: C++11 Compiler, Pangolin0.5, OpenCV3.4.8 and Eigen3.3.1 
 - Install boost libraries with the command `sudo apt-get install libboost-all-dev`.
-- Install python 2.7, keras and tensorflow, and download the `mask_rcnn_coco.h5` model from this GitHub repository: https://github.com/matterport/Mask_RCNN/releases. 
+- For RGB-D, The following python environment is required：
+- Install python 2.7, keras 1.0.8 and tensorflow-gpu 1.14.0(It should be determined based on the CUDA version. For example,CUDA 10.0 & Cudnn 8.5.0), and download the `mask_rcnn_coco.h5` model from this GitHub repository: https://github.com/matterport/Mask_RCNN/releases.
+- For stereo, The following python environment is required：
+- install python 3.7, opencv-python 3.4.8, pytorch 1.8.1+cu101, torchvision 0.9.1+cu101, can download cityscapes here:https://www.cityscapes-dataset.com/login/.
 - Clone this repo:
 ```bash
 git clone https://github.com/BertaBescos/DynaSLAM.git
@@ -75,19 +67,3 @@ If `PATH_TO_OUTPUT` is provided, the inpainted frames are computed and saved in 
 ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Monocular/KITTIX.yaml PATH_TO_DATASET_FOLDER/dataset/sequences/SEQUENCE_NUMBER (PATH_TO_MASKS)
 ```
 
-
-## Citation
-
-If you use DynaSLAM in an academic work, please cite:
-
-    @article{bescos2018dynaslam,
-      title={{DynaSLAM}: Tracking, Mapping and Inpainting in Dynamic Environments},
-      author={Bescos, Berta, F\'acil, JM., Civera, Javier and Neira, Jos\'e},
-      journal={IEEE RA-L},
-      year={2018}
-     }
-
-## Acknowledgements
-Our code builds on [ORB-SLAM2](https://github.com/raulmur/ORB_SLAM2).
-
-# DynaSLAM
